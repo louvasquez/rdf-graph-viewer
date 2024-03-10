@@ -1,4 +1,7 @@
 
-
-#extra_prefixes:
-  
+# additional prefixes (not in RDF)
+# RDF prefixes will be replaced as well
+# 
+extra_prefixes:
+  http://example.org/resource/: exrc
+  http://some.other.prefix: a_prefix

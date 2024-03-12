@@ -1,7 +1,52 @@
 
+# general pyvis options
+width_px: 1000
+height_px: 1000
+filter_menu: true
+select_menu: true
+show_buttons: true
+
 # additional prefixes (not in RDF)
 # RDF prefixes will be replaced as well
 # 
 extra_prefixes:
   http://example.org/resource/: exrc
   http://some.other.prefix: a_prefix
+
+# filters any triple containing string in list (as s,p, or o)
+filters:
+  - not_this
+  - or_this
+
+# overrides label of parent node(subject) with child(object) where edge(predicate) matches
+# e.g.
+#   for triple A --(last_name)--> B
+#   if 'last_name' is in overrides, A will recieve B's label
+# intended to handle ontologies where an object's name is contained in a predicate's object
+label_overrides:
+  - 'last_name'
+
+# pyvis override optons
+# NOTE MUST Keep 'configure' block
+#  configure:
+#    enabled: true
+pyvis_config_options:
+  configure:
+    WARNING: MUST KEEP THIS
+    enabled: true
+  #nodes:  # hard to get right, leaving empty for default
+  edges:
+    arrows: # also see 'from', 'middle'
+      to:
+        enabled: true
+    color:
+      inherit: true
+    selfReferenceSize: null
+    selfReference:
+      angle: 0.7853981633974483
+    smooth:
+      type: continuous
+      forceDirection: none
+  physics:
+    enabled: false
+

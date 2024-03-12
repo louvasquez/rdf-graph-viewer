@@ -9,6 +9,9 @@ Creates visual interactive graph (graph.html) from rdf file.
 - segments literals into distinct nodes (prefixed with `L(n)` to make unique)
 - replaces typical long java UUID (see output for mapping)
 - allows additional('extra') prefixes not in rdf (see config)
+- permits filtering of triples by list of strings (see config)
+- override of pyvis Network settings (see config)
+- overrides node's label with subject for matching labels (see config) (RDF/LPG impedance mismatch)
 
 # Details
 
@@ -26,6 +29,9 @@ e.g.
 ## TODO
 
 - add color by node type
+- override tooltip with IRI
+- override node name with item in its path
+- override pyvis config options
 - generalize more things (output filename, ...)
 - utilize more rdf native properties
 - many more...

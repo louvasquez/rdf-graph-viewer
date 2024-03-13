@@ -122,7 +122,8 @@ nt = Network(
     configs.get('height_px','1000px'),
     configs.get('width_px','1500px'),
     filter_menu=configs.get('filter_menu',True),
-    select_menu=configs.get('select_menu',True))
+    select_menu=configs.get('select_menu',True),
+    cdn_resources='in_line')
 #nt.show_buttons(filter_=["physics"])
 nt.show_buttons(configs.get('show_buttons',True))
 nt.from_nx(ng)

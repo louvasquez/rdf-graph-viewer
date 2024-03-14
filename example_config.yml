@@ -24,7 +24,15 @@ filters:
 #   if 'last_name' is in overrides, A will recieve B's label
 # intended to handle ontologies where an object's name is contained in a predicate's object
 label_overrides:
-  - 'last_name'
+  - 'rdfs:label'
+
+# edges to "propertize"
+# matching edges will have end nodes converted to properties of main node
+# e.g.
+#   for triple A(label1) --(prop1)--> B(label2)
+#   if "prop1" is in list, As label will be appended with "prop1:label2"
+propertize:
+  - 'type'
 
 # pyvis override optons
 # NOTE MUST Keep 'configure' block

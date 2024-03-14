@@ -12,6 +12,7 @@ Creates visual interactive graph (graph.html) from rdf file.
 - permits filtering of triples by list of strings (see config)
 - override of pyvis Network settings (see config)
 - overrides node's label with subject for matching labels (see config) (RDF/LPG impedance mismatch)
+- "propertizes" edges, converting edges into properties (see config)
 
 # Details
 
@@ -29,9 +30,7 @@ e.g.
 ## TODO
 
 - add color by node type
-- override tooltip with IRI
-- override node name with item in its path
-- override pyvis config options
+- propertize paths (not just directly connected nodes)
 - generalize more things (output filename, ...)
 - utilize more rdf native properties
 - many more...
